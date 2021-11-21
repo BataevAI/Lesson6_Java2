@@ -15,7 +15,7 @@
       fx:controller="com.example.lesson4_javafx.HelloController">
 
 
-    <Label text="Быстрые шаблоны" alignment="TOP_LEFT"/>
+    <Label text="Examples" alignment="TOP_LEFT"/>
     <padding>
 
         <Insets bottom="23" left="8" right="8" top="8"/>
@@ -23,12 +23,12 @@
     </padding>
 
     <HBox spacing="5">
-        <Button text="Добрый день!" onAction="#ClickButton1"/>
+        <Button text="Good day!" onAction="#ClickButton1"/>
 
-        <Button text="Привет!" onAction="#ClickButton1"/>
-        <Button text="Спасибо!" onAction="#ClickButton1"/>
-        <Button text="Отлично!" onAction="#ClickButton1"/>
-        <Button text="Хорошо." onAction="#ClickButton1"/>
+        <Button text="Hi!" onAction="#ClickButton1"/>
+        <Button text="Thanks!" onAction="#ClickButton1"/>
+        <Button text="Wonderful!" onAction="#ClickButton1"/>
+        <Button text="Good." onAction="#ClickButton1"/>
     </HBox>
     <padding>
 

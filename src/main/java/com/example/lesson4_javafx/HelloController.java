@@ -12,20 +12,26 @@ public class HelloController {
     private TextArea messageArea;
     @FXML
     private TextField messageField;
+    private EchoClient client;
 
-
-
-
+    public HelloController() {
+        client = new EchoClient(this);
+    }
 
     @FXML
     public void ClickSendButton(ActionEvent actionEvent) {
-        final String message = messageField.getText();
+        //final String message = messageField.getText();
+        final String message = messageField.getText().trim();
         if (message.isEmpty()) {
             return;
         }
-        messageArea.appendText(message + "\n");
-        messageField.setText("");
+        client.setMessage(message);
+        messageField.clear();
         messageField.requestFocus();
+
+        //        messageArea.appendText(message + "\n");
+//        messageField.setText("");
+//        messageField.requestFocus();
 
     }
 
@@ -44,5 +50,9 @@ public class HelloController {
         messageField.requestFocus();
 
 
+    }
+
+    public void addMessage(String message) {
+        messageArea.appendText(message + "\n");
     }
 }
