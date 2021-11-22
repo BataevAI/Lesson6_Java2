@@ -22,16 +22,15 @@ public class HelloController {
     public void ClickSendButton(ActionEvent actionEvent) {
         //final String message = messageField.getText();
         final String message = messageField.getText().trim();
+        // final String message2 = messageField.getText().trim();
         if (message.isEmpty()) {
             return;
         }
         client.setMessage(message);
+
         messageField.clear();
         messageField.requestFocus();
 
-        //        messageArea.appendText(message + "\n");
-//        messageField.setText("");
-//        messageField.requestFocus();
 
     }
 
@@ -48,7 +47,7 @@ public class HelloController {
         messageArea.appendText(source.getText() + "\n");
         messageField.setText("");
         messageField.requestFocus();
-
+        client.setMessage(source.getText() + "\n");
 
     }
 

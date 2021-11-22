@@ -38,12 +38,12 @@ public class EchoServer {
             });
             thread.start();
 
-                while (true) {
-                    Scanner scr = new Scanner(System.in);
-                    System.out.println("Введите сообщение... ");
-                    String messageS = scr.nextLine();
-                    out.writeUTF(messageS);
-                }
+            while (true) {
+                Scanner scr = new Scanner(System.in);
+                System.out.println("Введите сообщение... ");
+                String messageS = scr.nextLine();
+                out.writeUTF(messageS);
+            }
 
 
         } catch (IOException e) {

@@ -3,15 +3,15 @@ package com.example.lesson4_javafx;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
+
 import java.net.Socket;
-import java.io.*;
+
 
 public class EchoClient {
     private Socket socket;
     private DataInputStream in;
     private DataOutputStream out;
-    //private ModuleLayer.Controller controller;
+
     private HelloController controller;
 
     public EchoClient(HelloController controller) {
@@ -53,14 +53,14 @@ public class EchoClient {
     }
 
     private void closeConnection() {
-        if(socket != null) {
+        if (socket != null) {
             try {
                 socket.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        if(in != null) {
+        if (in != null) {
             try {
                 in.close();
 
@@ -69,7 +69,7 @@ public class EchoClient {
             }
         }
 
-        if(out != null) {
+        if (out != null) {
             try {
                 out.close();
 
